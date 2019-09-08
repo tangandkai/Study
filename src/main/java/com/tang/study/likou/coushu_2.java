@@ -15,23 +15,24 @@ public class coushu_2 {
         cal();
     }
 
-    public static void cal() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String line = "";
-        while ((line=br.readLine())!=null){
-            int n = Integer.parseInt(line);
-            int num = n+1;
+    public static int cal() throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        String line = ""
+            int n = 10;
+//            int num = n+1;
+            int value = 1;
+            int index = 0;
             while (true){
-                if (f(num)){
-                    System.out.println("前"+n+"个丑数是: "+num);
-                    break;
+                if (f(value)){
+                    index++;
+                    if (index==n){
+                        System.out.println("前"+n+"个丑数是: "+value);
+                        return value;
+                    }
                 }
-                else {
-                    num++;
-                }
+                value++;
             }
-
-        }
+//        return -1;
     }
 
     public static boolean f(Integer num){

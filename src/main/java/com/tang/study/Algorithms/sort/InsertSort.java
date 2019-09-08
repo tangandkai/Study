@@ -7,7 +7,7 @@ public class InsertSort {
         if(a.length<=1){
             return;
         }
-        int current = -1;
+        int current;
         for (int i=1;i<a.length;i++){
             current = a[i];
             int curIndex = i;

@@ -21,7 +21,7 @@ object Main{
   }
   ArrayBuffer()
   def main(args: Array[String]): Unit = {
-//    val instance = new test
+//    val instance = new commonTest
 //    instance.xx = "tang"
 //    print(instance.xx)
 //    val l =  List(1,2,3,4)

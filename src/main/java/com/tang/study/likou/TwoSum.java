@@ -25,4 +25,6 @@ public class TwoSum {
         }
         return indexs;
     }
+
+    public void twoSum(int[] nums,int targer){}
 }

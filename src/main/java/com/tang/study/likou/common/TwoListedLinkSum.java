@@ -16,6 +16,8 @@ public class TwoListedLinkSum {
 
     public ListNode addTwoNumbers(ListNode l1,ListNode l2){
         ListNode node = new ListNode(0);
+        ListNode l11 = l1;
+        ListNode l22 = l2;
         ListNode head = node;
         int f = 0;
         while (l1!=null && l2!=null){
@@ -46,12 +48,12 @@ public class TwoListedLinkSum {
     public static void main(String[] args) {
         TwoListedLinkSum t = new TwoListedLinkSum();
         ListNode l1 = new ListNode(1);
-//        l1.next = new ListNode(7);
-//        l1.next.next = new ListNode(3);
+        l1.next = new ListNode(7);
+        l1.next.next = new ListNode(3);
 
         ListNode l2 = new ListNode(9);
         l2.next = new ListNode(9);
-//        l2.next.next = new ListNode(4);
+        l2.next.next = new ListNode(4);
 
         System.out.println(l1);
         System.out.println(l2);

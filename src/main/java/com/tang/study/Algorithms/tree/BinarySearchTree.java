@@ -318,10 +318,29 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value>{
         }
     }
 
+    /**
+     * 树的最大深度
+     * @param node
+     * @return
+     */
+    private int calMaxDepth(Node node){
+        if(node==null){return 0;}
+//        int leftDepth = calMaxDepth(node.left);
+        int rightDepth = calMaxDepth(node.right);
+//        System.out.println(leftDepth);
+        System.out.println(rightDepth);
+//        return Math.max(leftDepth,rightDepth)+1;
+        return rightDepth+1;
+    }
+
+    public int getMaxDepth(){
+        return calMaxDepth(root);
+    }
+
 
     @Test
     public void test(){
-        int N = 20;
+        int N = 10;
 
         // 创建一个数组，包含[0...N)的所有元素
         Integer[] arr = new Integer[N];
@@ -329,12 +348,12 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value>{
             arr[i] = new Integer(i);
 
         // 打乱数组顺序
-        for(int i = 0 ; i < N ; i ++){
-            int pos = (int) (Math.random() * (i+1));
-            Integer t = arr[pos];
-            arr[pos] = arr[i];
-            arr[i] = t;
-        }
+//        for(int i = 0 ; i < N ; i ++){
+//            int pos = (int) (Math.random() * (i+1));
+//            Integer t = arr[pos];
+//            arr[pos] = arr[i];
+//            arr[i] = t;
+//        }
         BinarySearchTree<Integer,String> bst = new BinarySearchTree<Integer,String>();
         for(int i = 0 ; i < N ; i ++)
             bst.insert(new Integer(arr[i]), Integer.toString(arr[i]));
@@ -350,14 +369,16 @@ public class BinarySearchTree <Key extends Comparable<Key>, Value>{
                 assert res == null;
         }
         System.out.println(bst.search(new Integer(7)));
-        bst.preScan();
+//        bst.preScan();
 //        bst.LevScan();
         bst.maxNum();
         bst.minNum();
-        bst.removeMaxNode();
-        bst.removeMinNode();
-        bst.maxNum();
-        bst.minNum();
-        bst.remove(15);
+//        bst.removeMaxNode();
+//        bst.removeMinNode();
+//        bst.maxNum();
+//        bst.minNum();
+//        bst.remove(15);
+
+        System.out.println(bst.getMaxDepth());
     }
 }

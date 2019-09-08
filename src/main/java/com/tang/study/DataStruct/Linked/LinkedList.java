@@ -90,7 +90,7 @@ public class LinkedList<E extends Comparable<E>>{
      */
     public void order(boolean flag){
         Node curNode = dumpyHead.next;
-        Node nextNode = null;
+        Node nextNode;
         if (flag==true){
             while (curNode.next!=null){
                 nextNode = curNode.next;
@@ -255,13 +255,13 @@ public class LinkedList<E extends Comparable<E>>{
     @Test
     public void test(){
         LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.addFirst(1);
-        linkedList.addFirst(5);
-        linkedList.addFirst(4);
-        linkedList.addFirst(3);
-        linkedList.addFirst(2);
-        linkedList.addFirst(1);
-        linkedList.addFirst(1);
+        linkedList.addLast(1);
+        linkedList.addLast(5);
+        linkedList.addLast(4);
+        linkedList.addLast(3);
+        linkedList.addLast(2);
+        linkedList.addLast(1);
+        linkedList.addLast(1);
         System.out.println(linkedList.dumpyHead.next);
         System.out.println(linkedList.toString());
         linkedList.order(true);

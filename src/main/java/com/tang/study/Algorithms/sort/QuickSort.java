@@ -25,6 +25,7 @@ public class QuickSort {
             pivotloc = sort(a,low,high);
             quickSort(a,low,pivotloc-1);
             quickSort(a,pivotloc+1,high);
+            
         }
 
     }

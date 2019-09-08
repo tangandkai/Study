@@ -42,4 +42,6 @@ package com.tang.study.huawei;
  * 2200
  */
 public class ShopMenu {
+
+
 }
